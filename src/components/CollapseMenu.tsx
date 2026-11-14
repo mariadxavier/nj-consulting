@@ -30,7 +30,7 @@ export default function CollapseMenu({ items }: NavLinkProps) {
   }, [isMenuExpanded]);
 
   return (
-    <div className="lg:hidden flex items-center bg-(--color-green-light-bg) rounded-sm ">
+    <div className="lg:hidden flex items-center bg-(--color-green-light-bg) rounded-xl p-1.5">
       <CollapseMenuButton onClick={toggleMenuExpanded} isOpen={isMenuExpanded} />
       {isMenuExpanded &&
         <div className="flex flex-col gap-3 w-screen h-dvh absolute z-999 bg-(--color-white-shell) top-16 left-0 p-5 shadow-xl">
