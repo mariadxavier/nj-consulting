@@ -5,3 +5,5 @@ export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
 export { default as InfoChip } from "./InfoChip";
 export { default as Footer } from "./Footer";
+export { default as SocialMediaChip } from "./SocialMediaChip";
+export { default as SocialMediaList } from "./SocialMediaList";
