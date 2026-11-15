@@ -1,3 +1,6 @@
+export { default as AboutUs } from "./AboutUs";
+export { default as Article } from "./Article";
+export { default as BRCardInfo } from "./BRCardInfo";
 export { default as CollapseMenu } from "./CollapseMenu";
 export { default as CollapseMenuButton } from "./CollapseMenuButton";
 export { default as ContactButton } from "./ContactButton";
