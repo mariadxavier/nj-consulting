@@ -8,7 +8,7 @@ type ContactButtonProps = {
 };
 
 export default function ContactButton({ text, theme = 'clear', icon, link }: ContactButtonProps) {
-  const clearTheme = 'border border-(--color-green) text-(--color-green)';
+  const clearTheme = 'border border-(--color-green) text-(--color-green) bg-(--color-white)';
   const greenTheme = 'bg-(--color-green) text-(--color-white)';
   const phoneNumber = process.env.NEXT_PUBLIC_COMERCIAL_PHONE_NUMBER;
   const target = link ?? `https://wa.me//${phoneNumber}`;

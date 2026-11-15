@@ -1,4 +1,4 @@
-import { Header, Hero, Footer, AboutUs, BRCardInfo, HowItWorks, PublicAudience } from '@/src/components';
+import { Header, Hero, Footer, AboutUs, BRCardInfo, HowItWorks, PublicAudience, OurPlaces } from '@/src/components';
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <BRCardInfo />
       <HowItWorks />
       <PublicAudience />
+      <OurPlaces />
       <Footer />
     </main>
   );
