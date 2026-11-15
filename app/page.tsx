@@ -1,4 +1,14 @@
-import { Header, Hero, Footer, AboutUs, BRCardInfo, HowItWorks, PublicAudience, OurPlaces } from '@/src/components';
+import {
+  Header,
+  Hero,
+  Footer,
+  AboutUs,
+  BRCardInfo,
+  HowItWorks,
+  PublicAudience,
+  OurPlaces,
+  FAQ,
+} from '@/src/components';
 
 export default function Home() {
   return (
@@ -10,6 +20,7 @@ export default function Home() {
       <HowItWorks />
       <PublicAudience />
       <OurPlaces />
+      <FAQ />
       <Footer />
     </main>
   );

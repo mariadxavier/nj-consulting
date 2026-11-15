@@ -8,6 +8,8 @@ export { default as Header } from "./Header";
 export { default as Hero } from "./Hero";
 export { default as HowItWorks } from "./HowItWorks";
 export { default as InfoChip } from "./InfoChip";
+export { default as FAQ } from "./FAQ";
+export { default as FAQCollapseCard } from "./FAQCollapseCard";
 export { default as Footer } from "./Footer";
 export { default as Frame } from "./Frame";
 export { default as OurPlaces } from "./OurPlaces";
