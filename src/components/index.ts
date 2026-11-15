@@ -10,6 +10,7 @@ export { default as HowItWorks } from "./HowItWorks";
 export { default as InfoChip } from "./InfoChip";
 export { default as Footer } from "./Footer";
 export { default as Frame } from "./Frame";
+export { default as PublicAudience } from "./PublicAudience";
 export { default as SocialMediaChip } from "./SocialMediaChip";
 export { default as SocialMediaList } from "./SocialMediaList";
 export { default as Step } from "./Step";
