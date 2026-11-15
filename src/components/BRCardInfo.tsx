@@ -4,6 +4,7 @@ import TagIcon from '@/src/assets/TagIcon.svg';
 import ArmorIcon from '@/src/assets/ArmorIcon.svg';
 import Article from './Article';
 import CheckIcon from '@/src/assets/CheckIcon';
+import { Frame } from '@/src/components';
 
 export default function BRCardInfo() {
   return (
@@ -14,14 +15,10 @@ export default function BRCardInfo() {
           Cartão de crédito e cartão benefício em um só, voltado a servidores públicos.
         </p>
       </div>
-      <div className="flex flex-col gap-5 p-5 rounded-2xl border border-(--color-green)">
-        <h1 className="text-(--color-green) text-2xl font-semibold">
-          Um cartão pensado para servidores públicos
-        </h1>
-        <p className="text-sm">
-          Com benefícios práticos, atendimento humano e condições transparentes desde o início do
-          processo.
-        </p>
+      <Frame
+        title="Um cartão pensado para servidores públicos"
+        subtitle="Com benefícios práticos, atendimento humano e condições transparentes desde o início do processo."
+      >
         <Article
           icon={WalletIcon.src}
           title="Saque de até 70% do limite"
@@ -42,7 +39,7 @@ export default function BRCardInfo() {
           title="Sem consulta SPC/Serasa"
           subtitle="A avaliação considera seu vínculo como servidor. Concessão sujeita à análise."
         />
-      </div>
+      </Frame>
       <div className="bg-(--color-green-light-bg) flex flex-col p-4 gap-2.5 rounded-xl">
         <h2 className="font-semibold text-(--color-green) text-lg">Benefícios práticos</h2>
         <div className="flex items-center gap-2 text-(--color-green)">

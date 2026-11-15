@@ -1,4 +1,4 @@
-import { Header, Hero, Footer, AboutUs, BRCardInfo } from '@/src/components';
+import { Header, Hero, Footer, AboutUs, BRCardInfo, HowItWorks } from '@/src/components';
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <BRCardInfo />
+      <HowItWorks />
       <Footer />
     </main>
   );
