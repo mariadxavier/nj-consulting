@@ -1,0 +1,94 @@
+'use client';
+
+import { useState, type FormEvent } from 'react';
+import ContactButton from './ContactButton';
+import WhatsAppMessage from '../util/WhatsAppMessage';
+import type { ContactInfo } from '../types';
+
+export default function ContactUs() {
+    const [name, setName] = useState('');
+    const [city, setCity] = useState('');
+    const [attachment, setAttachment] = useState('');
+    const [errors, setErrors] = useState<Partial<Record<keyof ContactInfo, string>>>({});
+
+    function validate(): ContactInfo | null {
+        const newErrors: typeof errors = {};
+
+        if (!name.trim()) newErrors.name = 'Preencha seu nome';
+        if (!city.trim()) newErrors.city = 'Preencha sua cidade';
+        if (!attachment) newErrors.attachment = 'Selecione seu vínculo';
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) return null;
+
+        return { name: name.trim(), city: city.trim(), attachment };
+    }
+
+    function handleSubmit(e: FormEvent) {
+        e.preventDefault();
+        const info = validate();
+        if (!info) return;
+
+        const url = WhatsAppMessage.buildContactUrl(info);
+        window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    return (
+        <section className="flex flex-col justify-center gap-5 p-5">
+            <h1 className="font-semibold text-3xl text-(--color-black)">Converse com alguém do nosso time.</h1>
+            <p className="text-(--color-gray)">Atendimento pelo WhatsApp, de segunda a sexta.</p>
+            <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl" onSubmit={handleSubmit}>
+                <h1 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h1>
+                <p className="text-(--color-gray)">Preencha para montar uma mensagem. Você confere e envia pelo WhatsApp.</p>
+
+                <div className="flex flex-col gap-2">
+                    <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-name">Nome</label>
+                    <input
+                        id="contact-name"
+                        className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.name ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                        type="text"
+                        placeholder="Como você gostaria de ser chamado"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    {errors.name && <span className="text-red-500 text-xs">{errors.name}</span>}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-city">Cidade</label>
+                    <input
+                        id="contact-city"
+                        className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.city ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                        type="text"
+                        placeholder="Cidade onde você trabalha"
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                    />
+                    {errors.city && <span className="text-red-500 text-xs">{errors.city}</span>}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-attachment">Vínculo</label>
+                    <select
+                        id="contact-attachment"
+                        className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.attachment ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                        value={attachment}
+                        onChange={(e) => setAttachment(e.target.value)}
+                    >
+                        <option value="">Selecione seu vínculo</option>
+                        <option value="Sou servidor público - Federal">Sou servidor público - Federal</option>
+                        <option value="Sou servidor público - Estadual">Sou servidor público - Estadual</option>
+                        <option value="Sou servidor público - Municipal">Sou servidor público - Municipal</option>
+                        <option value="Não sou servidor público">Não sou servidor público</option>
+                        <option value="Tenho outro vínculo">Tenho outro vínculo</option>
+                    </select>
+                    {errors.attachment && <span className="text-red-500 text-xs">{errors.attachment}</span>}
+                </div>
+
+                <ContactButton asSubmit />
+                <p className="text-(--color-gray) text-xs">Os dados apenas montam uma mensagem para revisar e enviar no WhatsApp. Nenhum dado é enviado a servidores.</p>
+            </form>
+        </section>
+    );
+}

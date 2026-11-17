@@ -4,3 +4,9 @@ export type NavLinkProps = {
     name: string;
   }[];
 };
+
+export type ContactInfo = {
+  name: string;
+  city: string;
+  attachment: string;
+}

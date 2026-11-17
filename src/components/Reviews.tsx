@@ -1,6 +1,5 @@
 import { GoogleReview } from '../types';
 import { ContactButton, GoogleReview as GoogleReviewComponent } from '@/src/components';
-import WhatsAppIcon from "@/src/assets/WhatsAppIcon.svg";
 
 export default function Reviews() {
   const googleReviews: GoogleReview[] = [
@@ -18,8 +17,8 @@ export default function Reviews() {
       <p className="text-(--color-gray)">Avaliações publicadas no Google</p>
       {googleReviews &&
         googleReviews.map((review) => <GoogleReviewComponent key={review.id} review={review} />)}
-        <ContactButton text='Ver avaliações no Google' link='' />
-        <ContactButton text='Falar no WhatsApp' icon={WhatsAppIcon.src} theme='green' />
+        <ContactButton text='Ver avaliações no Google' link='' theme='clear' />
+        <ContactButton />
     </section>
   );
 }

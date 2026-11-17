@@ -11,11 +11,11 @@ export default function OurPlaces() {
       address: 'Minas Gerais',
     },
     {
-        id: '2',
-        name: 'Brasília - DF',
-        imgSrc: '',
-        address: 'Distrito Federal',
-      }
+      id: '2',
+      name: 'Brasília - DF',
+      imgSrc: '',
+      address: 'Distrito Federal',
+    }
 
   ];
 
@@ -34,7 +34,7 @@ export default function OurPlaces() {
       )}
       <div className='bg-(--color-green-light-bg) text-(--color-green) text-sm p-5 flex flex-col gap-4 rounded-2xl'>
         <p>Não encontrou sua cidade? Fale com a gente para saber quando chegaremos na sua região.</p>
-        <ContactButton text='Consultar minha cidade' />
+        <ContactButton text='Consultar minha cidade' theme="clear" />
       </div>
     </section>
   );

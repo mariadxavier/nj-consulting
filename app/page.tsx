@@ -9,6 +9,7 @@ import {
   OurPlaces,
   FAQ,
   Reviews,
+  ContactUS,
 } from '@/src/components';
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <OurPlaces />
       <FAQ />
       <Reviews />
+      <ContactUS />
       <Footer />
     </main>
   );

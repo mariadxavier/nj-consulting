@@ -1,5 +1,4 @@
 import { ContactButton, InfoChip } from '@/src/components';
-import WhatsAppIcon from '@/src/assets/WhatsAppIcon.svg';
 import MoneyBagIcon from '@/src/assets/MoneyBagIcon.svg';
 import PixIcon from '@/src/assets/PixIcon.svg';
 import CheckIcon from '@/src/assets/CheckIcon.svg';
@@ -15,7 +14,7 @@ export default function Hero() {
         Cartão de crédito e benefício para servidores públicos, com atendimento digital, humano e
         sem burocracia.
       </p>
-      <ContactButton text="Falar no WhatsApp" theme="green" icon={WhatsAppIcon} />
+      <ContactButton />
       <div className='text-xs text-(--color-green) flex flex-col gap-2'>
         <p className=" font-medium">Correspondente autorizado CredBR</p>
         <p className="text-(--color-green-dark-text)">
