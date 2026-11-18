@@ -3,14 +3,15 @@ import WomanImg from '@/src/assets/WomanImg.svg';
 
 export default function PublicAudience() {
   return (
-    <section id='public-audience' className="flex flex-col px-5 py-6 gap-6 md:py-8">
+    <section id="public-audience" className="flex flex-col px-5 py-6 gap-6 md:py-8">
       <div className="lg:hidden bg-(--color-green-dark) rounded-2xl flex flex-col gap-5 p-6 pb-0 text-(--color-white) md:relative md:flex-row md:items-end">
         <div className="flex flex-col gap-5 md:py-4 md:shrink-0 md:w-1/2">
-          <h1 className='text-2xl font-semibold md:text-3xl'>Para quem somos?</h1>
+          <h1 className="text-2xl font-semibold md:text-3xl">Para quem somos?</h1>
           <p>
-            Atendemos servidores das praças atendidas, efetivos, comissionados ou contratados conforme
-            convênio da folha. A elegibilidade é confirmada na análise, que considera o vínculo e as
-            condições do servidor.
+            Atendemos servidores públicos das praças conveniadas, sejam efetivos, comissionados ou
+            contratados, de acordo com as regras de cada convênio de folha. Nossa solução é voltada
+            a quem busca acesso ao crédito consignado com praticidade, transparência e condições
+            adequadas ao seu vínculo funcional. A elegibilidade é confirmada durante a análise.
           </p>
         </div>
         <div className="md:flex md:justify-end md:w-1/2">
@@ -28,11 +29,11 @@ export default function PublicAudience() {
         <div className="relative bg-(--color-green-dark) lg:w-[80%] lg:m-auto rounded-2xl overflow-visible z-10">
           <div className="flex items-end">
             <div className="w-[55%] xl:w-[50%] p-10 xl:p-14 text-(--color-white)">
-              <h1 className='text-3xl xl:text-4xl font-semibold mb-5'>Para quem somos?</h1>
-              <p className='xl:text-lg'>
-                Atendemos servidores das praças atendidas, efetivos, comissionados ou contratados conforme
-                convênio da folha. A elegibilidade é confirmada na análise, que considera o vínculo e as
-                condições do servidor.
+              <h1 className="text-3xl xl:text-4xl font-semibold mb-5">Para quem somos?</h1>
+              <p className="xl:text-lg">
+                Atendemos servidores das praças atendidas, efetivos, comissionados ou contratados
+                conforme convênio da folha. A elegibilidade é confirmada na análise, que considera o
+                vínculo e as condições do servidor.
               </p>
             </div>
             <div className="w-[45%] xl:w-[50%] flex justify-center relative">

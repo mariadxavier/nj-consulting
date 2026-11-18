@@ -3,6 +3,7 @@ import Data from '../util/Data';
 
 export default function Reviews() {
   const googleReviews = Data.getGoogleReviews();
+  const googleReviewsUrl = process.env.NEXT_PUBLIC_GOOGLE_REVIEWS || '';
 
   return (
     <section id='reviews' className="flex flex-col p-5 gap-6 md:gap-4 md:py-8 lg:py-12 lg:px-10">
@@ -13,7 +14,7 @@ export default function Reviews() {
           googleReviews.map((review) => <GoogleReviewComponent key={review.id} review={review} />)}
       </div>
       <div className='flex flex-col gap-6 md:flex-row md:w-fit'>
-        <ContactButton text='Ver avaliações no Google' link='' theme='clear' />
+        <ContactButton text='Ver avaliações no Google' link={googleReviewsUrl} theme='clear' />
         <ContactButton />
       </div>
     </section>

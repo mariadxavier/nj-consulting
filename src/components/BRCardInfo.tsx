@@ -8,7 +8,7 @@ import { Frame } from '@/src/components';
 
 export default function BRCardInfo() {
   return (
-    <section id='brcard' className="flex flex-col md:flex-row justify-center lg:justify-evenly lg:items-center gap-6 md:gap-4 px-5 py-9 md:py-10">
+    <section id='brcard' className="flex flex-col md:flex-row justify-center lg:justify-evenly lg:items-center gap-6 md:gap-4 px-5 py-9 md:py-10 xl:p-10 xl:gap-10">
       <div className="flex flex-col justify-center gap-6 md:gap-4">
         <div className="flex flex-col gap-3">
           <h1 className="font-semibold text-(--color-black) text-3xl xl:text-4xl">O BRCard</h1>
@@ -44,32 +44,29 @@ export default function BRCardInfo() {
       </div>
       <div className="flex flex-col justify-center gap-6 md:h-full md:justify-around">
         <div className="bg-(--color-green-light-bg) flex flex-col p-4 gap-2.5 rounded-xl">
-          <h2 className="font-semibold text-(--color-green) text-lg xl:text-xl 2xl:text-2xl">Benefícios práticos</h2>
+          <h2 className="font-semibold text-(--color-green) text-lg xl:text-xl 2xl:text-2xl">Outros benefícios</h2>
           <div className="flex items-center gap-2 text-(--color-green)">
             <CheckIcon />
-            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Saque de até 70% do limite</p>
+            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Solidez de uma instituição financeira de prestígio</p>
           </div>{' '}
           <div className="flex items-center gap-2 text-(--color-green)">
             <CheckIcon />
-            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Saque de até 70% do limite</p>
+            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Atendimento humanizado de quem conhece a sua realidade</p>
           </div>{' '}
           <div className="flex items-center gap-2 text-(--color-green)">
             <CheckIcon />
-            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Saque de até 70% do limite</p>
-          </div>{' '}
+            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Condições justas, transparentes e sob medida para o seu momento</p>
+          </div>
           <div className="flex items-center gap-2 text-(--color-green)">
             <CheckIcon />
-            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Saque de até 70% do limite</p>
+            <p className="text-sm xl:text-[1rem] 2xl:text-lg">Descontos de até 70% em farmácias e no clube de vantagens</p>
           </div>
         </div>
         <div className="text-(--color-white) bg-(--color-green) rounded-3xl flex flex-col gap-2 p-5.5">
-          <h1 className="font-semibold text-xl">Seguro de vida gratuito</h1>
+          <h1 className="font-semibold text-xl">Seguro de Vida gratuito + Assistência Funeral</h1>
           <p>Proteção incluída no cartão</p>
         </div>
-        <div className="bg-(--color-green-light-bg) flex flex-col p-4 gap-2.5 rounded-xl text-(--color-gray) xl:text-lg">
-          <h2 className="font-semibold text-(--color-green) text-lg xl:text-xl">Descontos em farmácias</h2>
-          <p>Vantagens no dia a dia para você e sua família</p>
-        </div>
+
       </div>
     </section>
   );
