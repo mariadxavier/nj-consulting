@@ -35,7 +35,7 @@ export default function ContactUs() {
     }
 
     return (
-        <section className="flex flex-col justify-center gap-5 p-5">
+        <section id='contact-us' className="flex flex-col justify-center gap-5 p-5">
             <h1 className="font-semibold text-3xl text-(--color-black)">Converse com alguém do nosso time.</h1>
             <p className="text-(--color-gray)">Atendimento pelo WhatsApp, de segunda a sexta.</p>
             <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl" onSubmit={handleSubmit}>

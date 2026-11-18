@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function HowItWorks() {
   return (
-    <section className="flex flex-col p-5 gap-6">
+    <section id='how-it-works' className="flex flex-col p-5 gap-6">
       <h1 className="text-(--color-black) text-3xl font-semibold">Como funciona</h1>
       <p className="text-(--color-gray) text-sm">
         Três etapas simples, com acompanhamento humano do início ao fim.

@@ -8,7 +8,7 @@ import { Frame } from '@/src/components';
 
 export default function BRCardInfo() {
   return (
-    <section className="flex flex-col justify-center px-5 py-9 gap-6">
+    <section id='brcard' className="flex flex-col justify-center px-5 py-9 gap-6">
       <div className="flex flex-col gap-3">
         <h1 className="font-semibold text-(--color-black) text-3xl">O BRCard</h1>
         <p className="text-(--color-gray)">

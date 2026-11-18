@@ -1,8 +1,6 @@
 export type NavLinkProps = {
-  items: {
-    href: string;
-    name: string;
-  }[];
+  href: string;
+  name: string;
 };
 
 export type ContactInfo = {

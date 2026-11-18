@@ -3,7 +3,7 @@ import WomanImg from '@/src/assets/WomanImg.svg';
 
 export default function PublicAudience() {
   return (
-    <section className="flex flex-col px-5 py-6 gap-6">
+    <section id='public-audience' className="flex flex-col px-5 py-6 gap-6">
       <div className="bg-(--color-green-dark) rounded-2xl flex flex-col gap-5 p-6 pb-0 text-(--color-white)">
         <h1 className='text-2xl font-semibold'>Para quem somos?</h1>
         <p>

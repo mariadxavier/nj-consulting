@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutUs() {
   return (
-    <section className="bg-(--color-green-dark) text-(--color-white) flex flex-col justify-center gap-5 p-5">
+    <section id='about-us' className="bg-(--color-green-dark) text-(--color-white) flex flex-col justify-center gap-5 p-5">
       <h1 className="font-semibold text-3xl">Quem somos</h1>
       <p>
         NJ Consulting atua em inteligência comercial e financeira como correspondente autorizado da

@@ -16,7 +16,7 @@ const questions = [
 
 export default function FAQ() {
   return (
-    <section className="flex flex-col gap-6 p-5">
+    <section id='faq' className="flex flex-col gap-6 p-5">
       <h1 className="text-3xl font-semibold text-(--color-black)">Perguntas frequentes</h1>
       <div className="flex flex-col gap-4">
         {questions.map((item) => (

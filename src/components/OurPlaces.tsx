@@ -20,7 +20,7 @@ export default function OurPlaces() {
   ];
 
   return (
-    <section className="flex flex-col p-5 gap-6">
+    <section id='our-places' className="flex flex-col p-5 gap-6">
       <h1 className="text-3xl text-(--color-black) font-semibold">Cidades onde atuamos</h1>
       <p className="text-(--color-gray)">
         Atendemos servidores públicos municipais e estaduais nestas praças.

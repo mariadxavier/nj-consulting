@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-center px-5 py-5 gap-5">
+    <div id='hero' className="flex flex-col justify-center px-5 py-5 gap-5 mt-[80px]">
       <h1 className="text-4xl font-extrabold">Aqui, seu nome não é obstáculo.</h1>
       <p className="font-semibold text-(--color-green-dark-text)">
         Cartão de crédito e benefício para servidores públicos, com atendimento digital, humano e
@@ -24,10 +24,10 @@ export default function Hero() {
       </div>
       <Image src={BRCardIcon} alt='Imagem de cartão BRCard' width={350} height={224} />
       <div className='flex flex-col gap-2'>
-        <InfoChip text='Lorem ipson' icon={MoneyBagIcon}/>
-        <InfoChip text='Lorem ipson' icon={PixIcon}/>
-        <InfoChip text='Lorem ipson' icon={CheckIcon}/>
-        <InfoChip text='Lorem ipson' icon={NotePadIcon}/>
+        <InfoChip text='Lorem ipson' icon={MoneyBagIcon} />
+        <InfoChip text='Lorem ipson' icon={PixIcon} />
+        <InfoChip text='Lorem ipson' icon={CheckIcon} />
+        <InfoChip text='Lorem ipson' icon={NotePadIcon} />
       </div>
     </div>
   );
