@@ -37,7 +37,7 @@ export default function ContactUs() {
     return (
         <section id='contact-us' className="flex flex-col justify-center gap-5 p-5">
             <h1 className="font-semibold text-3xl text-(--color-black)">Converse com alguém do nosso time.</h1>
-            <p className="text-(--color-gray)">Atendimento pelo WhatsApp, de segunda a sexta.</p>
+            <p className="text-(--color-gray) text-sm">Atendimento pelo WhatsApp, de segunda a sexta.</p>
             <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl" onSubmit={handleSubmit}>
                 <h1 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h1>
                 <p className="text-(--color-gray)">Preencha para montar uma mensagem. Você confere e envia pelo WhatsApp.</p>
@@ -77,11 +77,10 @@ export default function ContactUs() {
                         onChange={(e) => setAttachment(e.target.value)}
                     >
                         <option value="">Selecione seu vínculo</option>
-                        <option value="Sou servidor público - Federal">Sou servidor público - Federal</option>
-                        <option value="Sou servidor público - Estadual">Sou servidor público - Estadual</option>
-                        <option value="Sou servidor público - Municipal">Sou servidor público - Municipal</option>
-                        <option value="Não sou servidor público">Não sou servidor público</option>
-                        <option value="Tenho outro vínculo">Tenho outro vínculo</option>
+                        <option value="Sou servidor(a) público(a) - Federal">Sou servidor(a) público(a) - Federal</option>
+                        <option value="Sou servidor(a) público(a) - Estadual">Sou servidor(a) público(a) - Estadual</option>
+                        <option value="Sou servidor(a) público(a) - Municipal">Sou servidor(a) público(a) - Municipal</option>
+                        <option value="Não sou servidor(a) público(a)">Não sou servidor(a) público(a)</option>
                     </select>
                     {errors.attachment && <span className="text-red-500 text-xs">{errors.attachment}</span>}
                 </div>
