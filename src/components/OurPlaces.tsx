@@ -1,32 +1,19 @@
 import { City } from '../types';
+import Data from '../util/Data';
 import CityArticle from './CityArticle';
 import ContactButton from './ContactButton';
 
 export default function OurPlaces() {
-  const supportedCities: City[] = [
-    {
-      id: '1',
-      name: 'Mariana - MG',
-      imgSrc: '',
-      address: 'Minas Gerais',
-    },
-    {
-      id: '2',
-      name: 'Brasília - DF',
-      imgSrc: '',
-      address: 'Distrito Federal',
-    }
-
-  ];
+  const supportedCities: City[] = Data.getOurPlaces();
 
   return (
-    <section id='our-places' className="flex flex-col p-5 gap-6">
-      <h1 className="text-3xl text-(--color-black) font-semibold">Cidades onde atuamos</h1>
-      <p className="text-(--color-gray)">
+    <section id='our-places' className="flex flex-col p-5 gap-6 lg:py-12 lg:px-10">
+      <h1 className="text-3xl text-(--color-black) font-semibold xl:text-4xl">Cidades onde atuamos</h1>
+      <p className="text-(--color-gray) xl:text-lg">
         Atendemos servidores públicos municipais e estaduais nestas praças.
       </p>
       {supportedCities && (
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {supportedCities.map((city) => (
             <CityArticle key={city.id} city={city} />
           ))}

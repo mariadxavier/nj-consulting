@@ -1,17 +1,81 @@
-"use client";
+'use client';
 import Image from 'next/image';
 import Logo from '@/public/logo.svg';
 import { CollapseMenu } from '@/src/components';
 import Data from '../util/Data';
 import Scroll from '../util/Scroll';
+import { useEffect, useState } from 'react';
+
+const sectionsToNav = Data.getSections();
 
 export default function Header() {
   const items = Data.getSections();
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const sections = sectionsToNav
+      .map((item) => document.getElementById(item.href.replace('#', '')))
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) {
+          setActiveSection(`#${visible.target.id}`);
+        }
+      },
+      { rootMargin: '-40% 0px -40% 0px', threshold: 0 },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <header className="container fixed bg-(--color-green-light) mx-auto px-4 py-4 flex items-center justify-between w-screen z-999">
-      <Image src={Logo.src} alt="NJ Consulting" width={52} height={52} className="rounded-sm" onClick={() => {Scroll.scrollToSection("#hero")}} />
-      <CollapseMenu items={items} />
+    <header className="container fixed z-999 mx-auto flex w-screen items-center justify-between bg-(--color-green-light) px-4 py-4 shadow">
+      <Image
+        src={Logo.src}
+        alt="NJ Consulting"
+        width={52}
+        height={52}
+        className="shrink-0 cursor-pointer rounded-sm"
+        onClick={() => {
+          Scroll.scrollToSection('#hero');
+        }}
+      />
+      <nav className="hidden flex-1 items-center justify-evenly px-8 lg:flex" aria-label="Seções">
+        {sectionsToNav.map((item) => {
+          const isActive = activeSection === item.href;
+
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`relative pb-1 lg:text-xs xl:text-sm font-medium whitespace-nowrap transition-colors ${
+                isActive
+                  ? 'text-(--color-green)'
+                  : 'text-(--color-black) hover:text-(--color-green)'
+              }`}
+              onClick={(event) => {
+                event.preventDefault();
+                Scroll.scrollToSection(item.href);
+              }}
+            >
+              {item.name}
+              <span
+                className={`absolute inset-x-0 -bottom-0.5 h-0.5 rounded-full ${
+                  isActive ? 'bg-(--color-green)' : 'bg-transparent'
+                }`}
+              />
+            </a>
+          );
+        })}
+      </nav>
+      <div className="lg:hidden">
+        <CollapseMenu items={items} />
+      </div>
     </header>
   );
 }

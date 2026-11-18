@@ -35,45 +35,45 @@ export default function ContactUs() {
     }
 
     return (
-        <section id='contact-us' className="flex flex-col justify-center gap-5 p-5 md:py-8">
-            <h1 className="font-semibold text-3xl text-(--color-black)">Converse com alguém do nosso time.</h1>
-            <div className='flex flex-col justify-center gap-5 lg:flex-row'>
-                <p className="text-(--color-gray) text-sm">Atendimento pelo WhatsApp, de segunda a sexta.</p>
-                <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl md:self-center md:max-w-[600px]" onSubmit={handleSubmit}>
+        <section id='contact-us' className="flex flex-col justify-center gap-5 p-5 md:py-8 lg:py-12 lg:px-10">
+            <h1 className="font-semibold text-3xl text-(--color-black) xl:text-4xl">Converse com alguém do nosso time.</h1>
+            <div className='flex flex-col justify-center gap-5 lg:flex-row lg:justify-between'>
+                <p className="text-(--color-gray) text-sm xl:text-[1rem]">Atendimento pelo WhatsApp, de segunda a sexta.</p>
+                <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl md:self-center md:max-w-[600px] xl:max-w-[55%]" onSubmit={handleSubmit}>
                     <h1 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h1>
                     <p className="text-(--color-gray)">Preencha para montar uma mensagem. Você confere e envia pelo WhatsApp.</p>
 
                     <div className="flex flex-col gap-2">
-                        <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-name">Nome</label>
+                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-name">Nome</label>
                         <input
                             id="contact-name"
-                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.name ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs xl:text-sm ${errors.name ? 'border-red-500' : 'border-(--color-green-light)'}`}
                             type="text"
                             placeholder="Como você gostaria de ser chamado"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
-                        {errors.name && <span className="text-red-500 text-xs">{errors.name}</span>}
+                        {errors.name && <span className="text-red-500 text-xs xl:text-sm">{errors.name}</span>}
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-city">Cidade</label>
+                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-city">Cidade</label>
                         <input
                             id="contact-city"
-                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.city ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs xl:text-sm ${errors.city ? 'border-red-500' : 'border-(--color-green-light)'}`}
                             type="text"
                             placeholder="Cidade onde você trabalha"
                             value={city}
                             onChange={(e) => setCity(e.target.value)}
                         />
-                        {errors.city && <span className="text-red-500 text-xs">{errors.city}</span>}
+                        {errors.city && <span className="text-red-500 text-xs xl:text-sm">{errors.city}</span>}
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label className="text-(--color-black) text-sm font-semibold" htmlFor="contact-attachment">Vínculo</label>
+                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-attachment">Vínculo</label>
                         <select
                             id="contact-attachment"
-                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs ${errors.attachment ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs xl:text-sm ${errors.attachment ? 'border-red-500' : 'border-(--color-green-light)'}`}
                             value={attachment}
                             onChange={(e) => setAttachment(e.target.value)}
                         >
@@ -83,11 +83,11 @@ export default function ContactUs() {
                             <option value="Sou servidor(a) público(a) - Municipal">Sou servidor(a) público(a) - Municipal</option>
                             <option value="Não sou servidor(a) público(a)">Não sou servidor(a) público(a)</option>
                         </select>
-                        {errors.attachment && <span className="text-red-500 text-xs">{errors.attachment}</span>}
+                        {errors.attachment && <span className="text-red-500 text-xs xl:text-sm">{errors.attachment}</span>}
                     </div>
 
                     <ContactButton asSubmit />
-                    <p className="text-(--color-gray) text-xs">Os dados apenas montam uma mensagem para revisar e enviar no WhatsApp. Nenhum dado é enviado a servidores.</p>
+                    <p className="text-(--color-gray) text-xs xl:text-sm">Os dados apenas montam uma mensagem para revisar e enviar no WhatsApp. Nenhum dado é enviado a servidores.</p>
                 </form>
             </div>
         </section>

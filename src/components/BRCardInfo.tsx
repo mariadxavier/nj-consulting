@@ -8,11 +8,11 @@ import { Frame } from '@/src/components';
 
 export default function BRCardInfo() {
   return (
-    <section id='brcard' className="flex flex-col md:flex-row justify-center gap-6 md:gap-4 px-5 py-9 md:py-10">
+    <section id='brcard' className="flex flex-col md:flex-row justify-center lg:justify-evenly lg:items-center gap-6 md:gap-4 px-5 py-9 md:py-10">
       <div className="flex flex-col justify-center gap-6 md:gap-4">
         <div className="flex flex-col gap-3">
-          <h1 className="font-semibold text-(--color-black) text-3xl">O BRCard</h1>
-          <p className="text-(--color-gray)">
+          <h1 className="font-semibold text-(--color-black) text-3xl xl:text-4xl">O BRCard</h1>
+          <p className="text-(--color-gray) xl:text-lg">
             Cartão de crédito e cartão benefício em um só, voltado a servidores públicos.
           </p>
         </div>

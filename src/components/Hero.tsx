@@ -5,16 +5,16 @@ import MoneyBagIcon from '@/src/assets/MoneyBagIcon.svg';
 import PixIcon from '@/src/assets/PixIcon.svg';
 import CheckIcon from '@/src/assets/CheckIcon.svg';
 import NotePadIcon from '@/src/assets/NotePadIcon.svg';
-import BRCardIcon from '@/src/assets/BRCardIcon.png';
+import BRCardIcon from '@/src/assets/BRCardIcon.svg';
 import Image from 'next/image';
 import Scroll from '@/src/util/Scroll';
 
 export default function Hero() {
   return (
-    <div id='hero' className="flex flex-col justify-center md:flex-row justify-center gap-5 p-5 md:py-8 mt-[80px]">
-      <div className="flex flex-col justify-center gap-5 md:w-[50%]">
-        <h1 className="text-4xl font-extrabold">Aqui, seu nome não é obstáculo.</h1>
-        <p className="font-semibold text-(--color-green-dark-text)">
+    <div id='hero' className="flex flex-col justify-center md:flex-row gap-5 p-5 md:py-8 mt-[80px] lg:relative lg:mt-[100px] lg:py-12 lg:px-10 xl:gap-20">
+      <div className="flex flex-col justify-center gap-5 md:w-[50%] lg:w-[45%] xl:w-[50%] xl:gap-8">
+        <h1 className="text-4xl font-extrabold xl:text-6xl">Aqui, seu nome não é obstáculo.</h1>
+        <p className="font-semibold text-(--color-green-dark-text) xl:text-lg">
           Cartão de crédito e benefício para servidores públicos, com atendimento digital, humano e
           sem burocracia.
         </p>
@@ -28,9 +28,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center gap-5 lg:relative md:w-[50%]">
-        <Image className='md:hidden lg:absolute lg:z-1' src={BRCardIcon} alt='Imagem de cartão BRCard' width={350} height={224} />
-        <div className='flex flex-col gap-2'>
+      <div className="flex flex-col justify-center gap-5 md:w-[50%]">
+        <Image className='md:hidden lg:block lg:absolute lg:right-0 lg:z-1 xl:w-[450] xl:right-8' src={BRCardIcon} alt='Imagem de cartão BRCard' width={350} height={224} />
+        <div className='flex flex-col gap-2 xl:gap-4'>
           <InfoChip text='Lorem ipson' icon={MoneyBagIcon} />
           <InfoChip text='Lorem ipson' icon={PixIcon} />
           <InfoChip text='Lorem ipson' icon={CheckIcon} />

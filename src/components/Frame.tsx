@@ -17,9 +17,9 @@ export default function Frame({ icon, title, subtitle, children }: FrameProps) {
             <Image src={icon} alt="" width={23} height={23} />
           </div>
         )}
-        <h1 className="text-(--color-green) text-xl font-semibold md:text-lg">{title}</h1>
+        <h1 className="text-(--color-green) text-xl font-semibold md:text-lg lg:text-xl">{title}</h1>
       </div>
-      <p className="text-sm md:text-xs">{subtitle}</p>
+      <p className="text-sm md:text-xs lg:text-[1rem]">{subtitle}</p>
       {children}
     </div>
   );

@@ -9,9 +9,9 @@ import Image from 'next/image';
 
 export default function HowItWorks() {
   return (
-    <section id='how-it-works' className="flex flex-col gap-6 md:gap-4 p-5 md:py-8">
-      <h1 className="text-(--color-black) text-3xl font-semibold">Como funciona</h1>
-      <p className="text-(--color-gray) text-sm">
+    <section id='how-it-works' className="flex flex-col gap-6 md:gap-4 p-5 md:py-8 lg:py-12 lg:px-10">
+      <h1 className="text-(--color-black) text-3xl font-semibold xl:text-4xl">Como funciona</h1>
+      <p className="text-(--color-gray) text-sm lg:text-[1rem] xl:text-lg">
         Três etapas simples, com acompanhamento humano do início ao fim.
       </p>
       <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 overflow-x-scroll gap-6 md:gap-2">
@@ -26,7 +26,7 @@ export default function HowItWorks() {
               alt={'Conversa de exemplo no WhatsApp'}
               width={100}
               height={100}
-              className="w-full max-w-[400px] md:max-w-[300px]"
+              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset]"
             />
           </Frame>
         </Step>
