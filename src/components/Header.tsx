@@ -34,7 +34,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="container fixed z-999 mx-auto flex w-screen items-center justify-between bg-(--color-green-light) px-4 py-4 shadow">
+    <header className="fixed z-999 flex w-full items-center justify-between bg-(--color-green-light) px-4 py-4 shadow">
       <Image
         src={Logo.src}
         alt="NJ Consulting"
@@ -53,7 +53,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className={`relative pb-1 lg:text-xs xl:text-sm font-medium whitespace-nowrap transition-colors ${
+              className={`relative pb-1 lg:text-xs xl:text-sm 2xl:text-[1rem] font-medium whitespace-nowrap transition-colors ${
                 isActive
                   ? 'text-(--color-green)'
                   : 'text-(--color-black) hover:text-(--color-green)'

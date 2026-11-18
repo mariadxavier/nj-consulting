@@ -14,12 +14,12 @@ export default function Frame({ icon, title, subtitle, children }: FrameProps) {
       <div className='flex items-center md:items-start gap-3'>
         {icon && (
           <div className="p-2.5 bg-(--color-green) rounded-xl w-fit shrink-0">
-            <Image src={icon} alt="" width={23} height={23} />
+            <Image src={icon} alt="" width={23} height={23} className='xl:w-[25] xl:h-[25] 2xl:w-[30] 2xl:h-[30]' />
           </div>
         )}
-        <h1 className="text-(--color-green) text-xl font-semibold md:text-lg lg:text-xl">{title}</h1>
+        <h1 className="text-(--color-green) text-xl font-semibold md:text-lg lg:text-xl xl:text-2xl">{title}</h1>
       </div>
-      <p className="text-sm md:text-xs lg:text-[1rem]">{subtitle}</p>
+      <p className="text-sm md:text-xs lg:text-[1rem] xl:text-lg">{subtitle}</p>
       {children}
     </div>
   );

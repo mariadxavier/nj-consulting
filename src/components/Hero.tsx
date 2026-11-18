@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-col justify-center gap-5 md:w-[50%]">
-        <Image className='md:hidden lg:block lg:absolute lg:right-0 lg:z-1 xl:w-[450] xl:right-8' src={BRCardIcon} alt='Imagem de cartão BRCard' width={350} height={224} />
+        <Image className='md:hidden lg:block lg:absolute lg:right-0 lg:z-1 2xl:w-[450] xl:right-8 3xl:w-[30%]' src={BRCardIcon} alt='Imagem de cartão BRCard' width={350} height={224} />
         <div className='flex flex-col gap-2 xl:gap-4'>
           <InfoChip text='Lorem ipson' icon={MoneyBagIcon} />
           <InfoChip text='Lorem ipson' icon={PixIcon} />

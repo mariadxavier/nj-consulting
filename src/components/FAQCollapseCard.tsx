@@ -24,8 +24,8 @@ export default function FAQCollapseCard({
           aria-expanded={isOpen}
           onClick={() => setIsOpen((open) => !open)}
         >
-          <span className="font-semibold text-(--color-black)">{question}</span>
-          <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-(--color-green-dark) text-xl leading-none text-(--color-green-dark)">
+          <span className="font-semibold text-(--color-black) xl:text-xl">{question}</span>
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-(--color-green-dark) text-xl leading-none text-(--color-green-dark) xl:text-xl">
             {isOpen ? '−' : '+'}
           </span>
         </button>
@@ -34,7 +34,7 @@ export default function FAQCollapseCard({
         className={`grid transition-[grid-template-rows] duration-200 ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
       >
         <div className="overflow-hidden">
-          <p className="pt-3 text-sm leading-relaxed text-(--color-gray)">{answer}</p>
+          <p className="pt-3 text-sm leading-relaxed text-(--color-gray) xl:text-lg">{answer}</p>
         </div>
       </div>
     </article>
