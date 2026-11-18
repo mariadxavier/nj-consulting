@@ -26,7 +26,7 @@ export default function OurPlaces() {
         Atendemos servidores públicos municipais e estaduais nestas praças.
       </p>
       {supportedCities && (
-        <div className="grid grid-cols-1 gap-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {supportedCities.map((city) => (
             <CityArticle key={city.id} city={city} />
           ))}
@@ -34,7 +34,9 @@ export default function OurPlaces() {
       )}
       <div className='bg-(--color-green-light-bg) text-(--color-green) text-sm p-5 flex flex-col gap-4 rounded-2xl'>
         <p>Não encontrou sua cidade? Fale com a gente para saber quando chegaremos na sua região.</p>
-        <ContactButton text='Consultar minha cidade' theme="clear" />
+        <div className='md:w-fit'>
+          <ContactButton text='Consultar minha cidade' theme="clear" />
+        </div>
       </div>
     </section>
   );

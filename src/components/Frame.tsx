@@ -10,16 +10,16 @@ type FrameProps = {
 
 export default function Frame({ icon, title, subtitle, children }: FrameProps) {
   return (
-    <div className="flex flex-col gap-5 p-5 rounded-2xl border-2 border-(--color-green)">
-      <div className='flex items-center gap-3'>
+    <div className="flex flex-col gap-5 p-5 rounded-2xl border-2 border-(--color-green) h-full">
+      <div className='flex items-center md:items-start gap-3'>
         {icon && (
           <div className="p-2.5 bg-(--color-green) rounded-xl w-fit shrink-0">
             <Image src={icon} alt="" width={23} height={23} />
           </div>
         )}
-        <h1 className="text-(--color-green) text-xl font-semibold">{title}</h1>
+        <h1 className="text-(--color-green) text-xl font-semibold md:text-lg">{title}</h1>
       </div>
-      <p className="text-sm">{subtitle}</p>
+      <p className="text-sm md:text-xs">{subtitle}</p>
       {children}
     </div>
   );

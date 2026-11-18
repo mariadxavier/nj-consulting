@@ -4,14 +4,16 @@ import DarkThemeLogo from '@/src/assets/DarkThemeLogo.jpg';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#000] text-(--color-white) flex flex-col gap-6 py-8 px-5 text-xs">
+    <footer className="bg-[#000] text-(--color-white) flex flex-col gap-6 py-8 px-5 text-xs md:gap-4">
       <hr />
       <div className='flex items-center justify-center'>
         <Image src={DarkThemeLogo} alt="NJ Consulting" width={80} height={80} />
       </div>
       <p>Correspondente autorizado · CredBR — Instituição de Pagamentos</p>
       <p>(31) 99779-0975 · (31) 98476-3116 · Instagram @njconsultingbr</p>
-      <SocialMediaList />
+      <div className='md:self-end'>
+        <SocialMediaList />
+      </div>
       <p>
         NJ Consulting — correspondente autorizado da CredBR, instituição de pagamentos. A concessão
         de crédito e cartão está sujeita à análise. Taxas, limites e demais condições são informados

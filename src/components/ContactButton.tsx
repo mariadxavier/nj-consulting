@@ -19,7 +19,7 @@ export default function ContactButton({
 }: ContactButtonProps) {
   const clearTheme = 'border border-(--color-green) text-(--color-green) bg-(--color-white)';
   const greenTheme = 'bg-(--color-green) text-(--color-white)';
-  const className = `rounded-full cursor-pointer p-4 w-full flex justify-center items-center gap-2.5 text-sm ${theme === 'clear' ? clearTheme : greenTheme}`;
+  const className = `rounded-full cursor-pointer p-4 flex justify-center items-center gap-2.5 text-sm shrink-0 md:px-8 md:py-3 ${theme === 'clear' ? clearTheme : greenTheme}`;
   const iconSrc = theme === 'green' ? WhatsAppIcon.src : icon;
 
   if (asSubmit) {

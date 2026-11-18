@@ -11,7 +11,7 @@ export default function GoogleReviews({ review }: { review: GoogleReview }) {
     </div>
   );
   return (
-    <div className="flex flex-col gap-6 p-5 rounded-xl bg-(--color-gray-light) text-(--color-gray)">
+    <div className="flex flex-col gap-6 p-5 md:py-8 md:gap-4 rounded-xl bg-(--color-gray-light) text-(--color-gray) md:min-w-80">
       <p className="text-sm font-semibold">{review.text}</p>
       <p className="text-(--color-black)">{review.author || 'Anônimo'}</p>
       <Stars />

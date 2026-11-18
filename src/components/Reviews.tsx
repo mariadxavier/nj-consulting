@@ -5,13 +5,17 @@ export default function Reviews() {
   const googleReviews = Data.getGoogleReviews();
 
   return (
-    <section id='reviews' className="flex flex-col p-5 gap-6">
+    <section id='reviews' className="flex flex-col p-5 gap-6 md:gap-4 md:py-8">
       <h1 className="text-(--color-black) text-3xl font-semibold">O que nossos clientes dizem</h1>
       <p className="text-(--color-gray)">Avaliações publicadas no Google</p>
-      {googleReviews &&
-        googleReviews.map((review) => <GoogleReviewComponent key={review.id} review={review} />)}
+      <div className="grid grid-cols-1 gap-3 md:overflow-x-auto md:flex md:py-2">
+        {googleReviews &&
+          googleReviews.map((review) => <GoogleReviewComponent key={review.id} review={review} />)}
+      </div>
+      <div className='flex flex-col gap-6 md:flex-row md:w-fit'>
         <ContactButton text='Ver avaliações no Google' link='' theme='clear' />
         <ContactButton />
+      </div>
     </section>
   );
 }
