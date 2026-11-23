@@ -6,8 +6,8 @@ export default function Reviews() {
   const googleReviewsUrl = process.env.NEXT_PUBLIC_GOOGLE_REVIEWS || '';
 
   return (
-    <section id='reviews' className="flex flex-col p-5 gap-6 md:gap-4 md:py-8 lg:py-12 lg:px-10">
-      <h1 className="text-(--color-black) text-3xl font-semibold xl:text-4xl">O que nossos clientes dizem</h1>
+    <section id='reviews' className="flex flex-col p-5 gap-6 md:gap-4 md:py-8 lg:py-12 lg:px-10 xl:p-20">
+      <h2 className="text-(--color-black) text-3xl font-semibold xl:text-4xl">O que nossos clientes dizem</h2>
       <p className="text-(--color-gray) xl:text-lg">Avaliações publicadas no Google</p>
       <div className="grid grid-cols-1 gap-3 md:overflow-x-auto md:flex md:py-2">
         {googleReviews &&

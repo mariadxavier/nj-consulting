@@ -38,9 +38,9 @@ export default function Header() {
       <Image
         src={Logo.src}
         alt="NJ Consulting"
-        width={52}
-        height={52}
-        className="shrink-0 cursor-pointer rounded-sm"
+        width={62}
+        height={62}
+        className="shrink-0 cursor-pointer rounded-sm xl:w-[70] 2xl:w-[80]"
         onClick={() => {
           Scroll.scrollToSection('#hero');
         }}

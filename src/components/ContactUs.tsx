@@ -37,12 +37,12 @@ export default function ContactUs() {
     }
 
     return (
-        <section id='contact-us' className="flex flex-col justify-center gap-5 p-5 md:py-8 lg:py-12 lg:px-10">
-            <h1 className="font-semibold text-3xl text-(--color-black) xl:text-4xl">Converse com alguém do nosso time.</h1>
+        <section id='contact-us' className="flex flex-col justify-center gap-5 p-5 md:py-8 lg:py-12 lg:px-10 xl:p-20">
+            <h2 className="font-semibold text-3xl text-(--color-black) xl:text-4xl">Converse com alguém do nosso time.</h2>
             <div className='flex flex-col justify-center gap-5'>
                 <p className="text-(--color-gray) text-sm xl:text-[1rem]">Atendimento pelo WhatsApp, de segunda a sexta.</p>
                 <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl md:self-center md:max-w-[600px] xl:max-w-[55%]" onSubmit={handleSubmit}>
-                    <h1 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h1>
+                    <h3 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h3>
                     <p className="text-(--color-gray)">Preencha para montar uma mensagem. Você confere e envia pelo WhatsApp.</p>
 
                     <div className="flex flex-col gap-2">

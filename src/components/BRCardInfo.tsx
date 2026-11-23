@@ -8,12 +8,12 @@ import { Frame } from '@/src/components';
 
 export default function BRCardInfo() {
   return (
-    <section id='brcard' className="flex flex-col md:flex-row justify-center lg:justify-evenly lg:items-center gap-6 md:gap-4 px-5 py-9 md:py-10 xl:p-10 xl:gap-10">
+    <section id='brcard' className="flex flex-col md:flex-row justify-center lg:justify-evenly lg:items-center gap-6 md:gap-4 px-5 py-9 md:py-10 xl:p-10 xl:gap-10 xl:p-20">
       <div className="flex flex-col justify-center gap-6 md:gap-4">
         <div className="flex flex-col gap-3">
-          <h1 className="font-semibold text-(--color-black) text-3xl xl:text-4xl">O BRCard</h1>
+          <h2 className="font-semibold text-(--color-black) text-3xl xl:text-4xl">O BRCard</h2>
           <p className="text-(--color-gray) xl:text-lg">
-            Cartão de crédito e cartão benefício em um só, voltado a servidores públicos.
+            Cartão de crédito e cartão benefício, voltado a servidores públicos.
           </p>
         </div>
         <Frame
@@ -63,7 +63,7 @@ export default function BRCardInfo() {
           </div>
         </div>
         <div className="text-(--color-white) bg-(--color-green) rounded-3xl flex flex-col gap-2 p-5.5">
-          <h1 className="font-semibold text-xl">Seguro de Vida gratuito + Assistência Funeral</h1>
+          <h3 className="font-semibold text-xl">Seguro de Vida gratuito + Assistência Funeral</h3>
           <p>Proteção incluída no cartão</p>
         </div>
 

@@ -9,8 +9,8 @@ import Image from 'next/image';
 
 export default function HowItWorks() {
   return (
-    <section id='how-it-works' className="flex flex-col gap-6 md:gap-4 p-5 md:py-8 lg:py-12 lg:px-10">
-      <h1 className="text-(--color-black) text-3xl font-semibold xl:text-4xl">Como funciona</h1>
+    <section id='how-it-works' className="flex flex-col gap-6 md:gap-4 p-5 md:py-8 lg:py-12 lg:px-10 xl:p-20">
+      <h2 className="text-(--color-black) text-3xl font-semibold xl:text-4xl">Como funciona</h2>
       <p className="text-(--color-gray) text-sm lg:text-[1rem] xl:text-lg">
         Três etapas simples, com acompanhamento humano do início ao fim.
       </p>
@@ -45,7 +45,7 @@ export default function HowItWorks() {
             />
           </Frame>
         </Step>
-        <Step title="Passo 1">
+        <Step title="Passo 3">
           <Frame
             icon={CardSimpleIcon}
             title="Ative o cartão e use quando precisar"

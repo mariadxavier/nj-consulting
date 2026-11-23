@@ -5,8 +5,8 @@ const questions = Data.getFAQ();
 
 export default function FAQ() {
   return (
-    <section id='faq' className="flex flex-col gap-6 p-5 lg:py-12 lg:px-10">
-      <h1 className="text-3xl font-semibold text-(--color-black) xl:text-4xl">Perguntas frequentes</h1>
+    <section id='faq' className="flex flex-col gap-6 p-5 lg:py-12 lg:px-10 xl:p-20">
+      <h2 className="text-3xl font-semibold text-(--color-black) xl:text-4xl">Perguntas frequentes</h2>
       <div className="flex flex-col gap-4 lg:max-w-[80%] xl:max-w-[70%] self-center">
         {questions.map((item, index) => (
           <FAQCollapseCard

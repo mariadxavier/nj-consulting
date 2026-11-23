@@ -7,8 +7,8 @@ export default function OurPlaces() {
   const supportedCities: City[] = Data.getOurPlaces();
 
   return (
-    <section id='our-places' className="flex flex-col p-5 gap-6 lg:py-12 lg:px-10">
-      <h1 className="text-3xl text-(--color-black) font-semibold xl:text-4xl">Onde atuamos</h1>
+    <section id='our-places' className="flex flex-col p-5 gap-6 lg:py-12 lg:px-10 xl:p-20">
+      <h2 className="text-3xl text-(--color-black) font-semibold xl:text-4xl">Onde atuamos</h2>
       <p className="text-(--color-gray) xl:text-lg">
         Atendemos servidores públicos municipais e estaduais nestas praças.
       </p>
