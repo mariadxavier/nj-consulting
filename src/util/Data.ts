@@ -1,4 +1,4 @@
-import { City, GoogleReview, NavLinkProps } from '../types';
+import { City, FAQ, GoogleReview, NavLinkProps } from '../types';
 
 class Data {
   getOurPlaces(): City[] {
@@ -81,25 +81,62 @@ class Data {
     const googleReviews: GoogleReview[] = [
       {
         id: '1',
-        author: '',
-        text: 'Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn`t used, which have also proved to be easy to use and reliable.Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch.',
-        rate: 4,
+        author: 'Jane',
+        text: 'Fui muito bem atendida. São resolutivos',
+        rate: 5,
       },
       {
         id: '2',
-        author: '',
-        text: 'Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn`t used, which have also proved to be easy to use and reliable.Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch.',
+        author: 'Daniela Dias',
+        text: 'Excelente consultoria empresarial! Serviço de qualidade, com profissionalismo e competência. Recomendo!',
         rate: 5,
       },
       {
         id: '3',
-        author: '',
-        text: 'Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn`t used, which have also proved to be easy to use and reliable.Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch.',
+        author: 'Karla Aline',
+        text: '',
+        rate: 5,
+      },
+      {
+        id: '4',
+        author: 'William Bailo',
+        text: '',
         rate: 5,
       },
     ];
     return googleReviews;
   }
+
+  getFAQ(): FAQ[] {
+    const FAQ = [
+      {
+        question: "Quem pode solicitar o cartão?",
+        answer:
+          "Servidores públicos (efetivos, comissionados ou contratados) dos municípios e órgãos estaduais conveniados. A elegibilidade é confirmada durante uma análise rápida do seu vínculo funcional.",
+        defaultOpen: true,
+      },
+      {
+        question: "Quem está negativado no SPC ou Serasa pode solicitar?",
+        answer:
+          "Sim! Aqui seu nome não é obstáculo. A análise não realiza consulta ao SPC ou Serasa, permitindo o acesso ao cartão de benefício mesmo para quem possui restrições no nome.",
+        defaultOpen: false,
+      },
+      {
+        question: "Como funciona o saque e qual o prazo de liberação?",
+        answer:
+          "Você pode transferir parte do limite disponível no cartão direto para sua conta bancária. Após a aprovação da operação, o dinheiro é transferido via Pix em até 2 horas.",
+        defaultOpen: false,
+      },
+      {
+        question: "O cartão possui taxa de anuidade?",
+        answer:
+          "Não. O cartão não possui taxa de anuidade. Você conta com total transparência, sem taxas ocultas e com acompanhamento do nosso time em todas as etapas.",
+        defaultOpen: false,
+      },
+    ];
+    return FAQ;
+  }
+
   getSections(): NavLinkProps[] {
     const sections: NavLinkProps[] = [
       {

@@ -8,6 +8,7 @@ type ContactButtonProps = {
   icon?: string;
   link?: string;
   asSubmit?: boolean;
+  className?: string;
 };
 
 export default function ContactButton({
@@ -16,15 +17,16 @@ export default function ContactButton({
   icon,
   link,
   asSubmit = false,
+  className = "",
 }: ContactButtonProps) {
   const clearTheme = 'border border-(--color-green) text-(--color-green) bg-(--color-white)';
   const greenTheme = 'bg-(--color-green) text-(--color-white)';
-  const className = `rounded-full cursor-pointer p-4 xl:text-lg flex justify-center items-center gap-2.5 text-sm shrink-0 md:px-8 md:py-3 ${theme === 'clear' ? clearTheme : greenTheme}`;
+  const mergedClassName = `rounded-full cursor-pointer w-fit p-4 xl:text-lg flex justify-center items-center gap-2.5 text-sm shrink-0 md:px-8 md:py-3 ${theme === 'clear' ? clearTheme : greenTheme} ` + className;
   const iconSrc = theme === 'green' ? WhatsAppIcon.src : icon;
 
   if (asSubmit) {
     return (
-      <button type="submit" className={className}>
+      <button type="submit" className={mergedClassName}>
         {text}
         {iconSrc && <Image src={iconSrc} width={20} height={20} alt="icone" />}
       </button>
@@ -38,7 +40,7 @@ export default function ContactButton({
       href={target}
       target="_blank"
       rel="noopener noreferrer"
-      className={className}
+      className={mergedClassName}
     >
       {text}
       {iconSrc && <Image src={iconSrc} width={20} height={20} alt="icone" />}

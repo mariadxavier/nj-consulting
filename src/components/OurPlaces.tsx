@@ -19,7 +19,7 @@ export default function OurPlaces() {
           ))}
         </div>
       )}
-      <div className='bg-(--color-green-light-bg) text-(--color-green) text-sm p-5 flex flex-col gap-4 rounded-2xl'>
+      <div className='bg-(--color-green-light-bg) text-(--color-green) text-sm p-5 flex flex-col gap-4 rounded-2xl lg:text-[1rem] xl:text-lg'>
         <p>Não encontrou sua cidade? Fale com a gente para saber quando chegaremos na sua região.</p>
         <div className='md:w-fit'>
           <ContactButton text='Consultar minha cidade' theme="clear" />

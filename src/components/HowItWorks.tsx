@@ -14,7 +14,7 @@ export default function HowItWorks() {
       <p className="text-(--color-gray) text-sm lg:text-[1rem] xl:text-lg">
         Três etapas simples, com acompanhamento humano do início ao fim.
       </p>
-      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 gap-6 md:gap-2">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 gap-6 md:gap-2 lg:gap-5 xl:gap-8 2xl:gap-12">
         <Step title="Passo 1">
           <Frame
             icon={ChatIcon}
@@ -26,7 +26,7 @@ export default function HowItWorks() {
               alt={'Conversa de exemplo no WhatsApp'}
               width={100}
               height={100}
-              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset]"
+              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset] lg:max-h-[300]"
             />
           </Frame>
         </Step>
@@ -41,7 +41,7 @@ export default function HowItWorks() {
               alt={'Ícone de lupa'}
               width={100}
               height={100}
-              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset]"
+              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset] lg:max-h-[300]"
             />
           </Frame>
         </Step>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
               alt={'Imagem de cartão de crédito'}
               width={100}
               height={100}
-              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset]"
+              className="w-full max-w-[400px] md:max-w-[300px] lg:max-w-[unset] lg:max-h-[300]"
             />
           </Frame>
         </Step>

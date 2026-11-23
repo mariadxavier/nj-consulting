@@ -9,6 +9,7 @@ export default function ContactUs() {
     const [name, setName] = useState('');
     const [city, setCity] = useState('');
     const [attachment, setAttachment] = useState('');
+    const [attachmentFunction, setAttachmentFunction] = useState('');
     const [errors, setErrors] = useState<Partial<Record<keyof ContactInfo, string>>>({});
 
     function validate(): ContactInfo | null {
@@ -16,13 +17,14 @@ export default function ContactUs() {
 
         if (!name.trim()) newErrors.name = 'Preencha seu nome';
         if (!city.trim()) newErrors.city = 'Preencha sua cidade';
-        if (!attachment) newErrors.attachment = 'Selecione seu vínculo';
+        if (!attachment) newErrors.attachment = 'Selecione seu vínculo profissional';
+        if (attachment && attachment !== 'Não sou servidor(a) público(a)' && !attachmentFunction) newErrors.attachmentFunction = 'Selecione sua situação funcional';
 
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length > 0) return null;
 
-        return { name: name.trim(), city: city.trim(), attachment };
+        return { name: name.trim(), city: city.trim(), attachment, attachmentFunction };
     }
 
     function handleSubmit(e: FormEvent) {
@@ -37,7 +39,7 @@ export default function ContactUs() {
     return (
         <section id='contact-us' className="flex flex-col justify-center gap-5 p-5 md:py-8 lg:py-12 lg:px-10">
             <h1 className="font-semibold text-3xl text-(--color-black) xl:text-4xl">Converse com alguém do nosso time.</h1>
-            <div className='flex flex-col justify-center gap-5 lg:flex-row lg:justify-between'>
+            <div className='flex flex-col justify-center gap-5'>
                 <p className="text-(--color-gray) text-sm xl:text-[1rem]">Atendimento pelo WhatsApp, de segunda a sexta.</p>
                 <form className="flex flex-col gap-4 p-5 bg-(--color-green-light-bg) rounded-xl md:self-center md:max-w-[600px] xl:max-w-[55%]" onSubmit={handleSubmit}>
                     <h1 className="font-semibold text-xl text-(--color-black)">Envie seus dados pelo WhatsApp</h1>
@@ -70,7 +72,7 @@ export default function ContactUs() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-attachment">Vínculo</label>
+                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-attachment">Qual é seu vínculo profisisonal?</label>
                         <select
                             id="contact-attachment"
                             className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs xl:text-sm ${errors.attachment ? 'border-red-500' : 'border-(--color-green-light)'}`}
@@ -86,7 +88,26 @@ export default function ContactUs() {
                         {errors.attachment && <span className="text-red-500 text-xs xl:text-sm">{errors.attachment}</span>}
                     </div>
 
-                    <ContactButton asSubmit />
+                    {attachment && attachment !== 'Não sou servidor(a) público(a)' && <div className="flex flex-col gap-2">
+                        <label className="text-(--color-black) text-sm xl:text-[1rem] font-semibold" htmlFor="contact-attachment">Qual é sua situação funcional?</label>
+                        <select
+                            id="contact-attachment"
+                            className={`p-3 rounded-lg border bg-(--color-white) text-(--color-gray) text-xs xl:text-sm ${errors.attachmentFunction ? 'border-red-500' : 'border-(--color-green-light)'}`}
+                            value={attachmentFunction}
+                            onChange={(e) => setAttachmentFunction(e.target.value)}
+                        >
+                            <option value="">Selecione sua função</option>
+                            <option value="Servidor(a) efetivo(a)/concursado (a)">Servidor(a) efetivo(a)/concursado(a)</option>
+                            <option value="Servidor(a) comissionado (a)">Servidor(a) comissionado(a)</option>
+                            <option value="Servidor(a) contratado(a) temporariamente">Servidor(a) contratado(a) temporariamente</option>
+                            <option value="Servidor(a) celetista (CLT)">Servidor(a) celetista (CLT)</option>
+                            <option value="Servidor(a) aposentado(a)">Servidor(a) aposentado(a)</option>
+                            <option value="Pensionista">Pensionista</option>
+                        </select>
+                        {errors.attachmentFunction && <span className="text-red-500 text-xs xl:text-sm">{errors.attachmentFunction}</span>}
+                    </div>}
+
+                    <ContactButton asSubmit className="self-center" />
                     <p className="text-(--color-gray) text-xs xl:text-sm">Os dados apenas montam uma mensagem para revisar e enviar no WhatsApp. Nenhum dado é enviado a servidores.</p>
                 </form>
             </div>

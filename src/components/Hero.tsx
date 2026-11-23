@@ -18,12 +18,12 @@ export default function Hero() {
           Cartão de crédito e benefício para servidores públicos, com atendimento digital, simples, transparente e humanizado.
         </p>
         <ContactButton />
-        <div className='text-xs text-(--color-green) flex flex-col gap-2'>
-          <p className=" font-medium">Correspondente autorizado CredBR</p>
+        <div className='text-xs text-(--color-green) flex flex-col gap-2 xl:text-lg'>
+          <p className="font-medium">Correspondente autorizado CredBR</p>
           <p className="text-(--color-green-dark-text)">
             Saque sujeito à análise. Pix em até 2 horas após a liberação
           </p>
-          <a onClick={() => Scroll.scrollToSection('#our-places')} className="text-sm font-medium cursor-pointer">Ver locais atendidos →</a>
+          <a onClick={() => Scroll.scrollToSection('#our-places')} className="text-sm font-medium cursor-pointe xl:text-[1rem]">Ver locais atendidos →</a>
         </div>
       </div>
 
