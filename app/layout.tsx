@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.svg",
+        url: "/logo-nj.jpeg",
         width: 800,
         height: 600,
         alt: "NJ Consulting - Cartão e Soluções para Servidores Públicos",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "NJ Consulting | Cartão de Crédito e Benefício para Servidores Públicos",
     description:
       "Cartão de benefício e crédito para servidores públicos sem burocracia, sem anuidade e sem consulta ao SPC/Serasa.",
-    images: ["/logo.svg"],
+    images: ["/logo-nj.jpeg"],
   },
   robots: {
     index: true,

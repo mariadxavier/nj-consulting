@@ -8,11 +8,7 @@ export default function PublicAudience() {
         <div className="flex flex-col gap-5 md:py-4 md:shrink-0 md:w-1/2">
           <h2 className="text-2xl font-semibold md:text-3xl">Para quem somos?</h2>
           <p>
-            Atendemos servidores públicos das praças conveniadas, sejam efetivos, comissionados ou
-            contratados, de acordo com as regras de cada convênio de folha. Nossa solução é voltada
-            a quem busca acesso ao crédito consignado com praticidade, transparência e condições
-            adequadas ao seu vínculo funcional. A elegibilidade é confirmada durante a análise.
-          </p>
+            Atendemos servidores públicos dos municípios e órgãos conveniados — efetivos, e também comissionados ou contratados quando previstos no convênio. A elegibilidade é confirmada na análise do seu vínculo e da margem disponível na folha.</p>
         </div>
         <div className="md:flex md:justify-end md:w-1/2">
           <Image
@@ -33,9 +29,7 @@ export default function PublicAudience() {
                 Para quem somos?
               </h2>
               <p className="text-base xl:text-lg 2xl:text-2xl leading-relaxed text-(--color-white)/95">
-                Atendemos servidores das praças atendidas, efetivos, comissionados ou contratados
-                conforme convênio da folha. A elegibilidade é confirmada na análise, que considera o
-                vínculo e as condições do servidor.
+                Atendemos servidores públicos dos municípios e órgãos conveniados — efetivos, e também comissionados ou contratados quando previstos no convênio. A elegibilidade é confirmada na análise do seu vínculo e da margem disponível na folha.
               </p>
             </div>
             <div className="w-[45%] xl:w-[48%] flex justify-center items-end relative">
